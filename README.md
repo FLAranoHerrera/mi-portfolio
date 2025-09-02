@@ -1,12 +1,64 @@
-# React + Vite
+# 🚀 Portfolio Personal - Francisco Arano
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio profesional desarrollado con tecnologías modernas para mostrar mis habilidades como desarrollador Fullstack.
 
-Currently, two official plugins are available:
+## 🌟 Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Diseño Responsive** - Optimizado para todos los dispositivos
+- **Tema Dark** - Estética cyberpunk con colores neón
+- **Componentes Modulares** - Arquitectura React bien estructurada
+- **Animaciones Suaves** - Transiciones y efectos hover elegantes
+- **SEO Optimizado** - Meta tags y estructura semántica
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React 19 + Vite 7
+- **Estilos**: TailwindCSS 3 + CSS personalizado
+- **Build Tool**: Vite con optimizaciones de producción
+- **Linting**: ESLint con reglas específicas para React
+- **Deployment**: GitHub Pages + GitHub Actions
+
+## 📱 Secciones del Portfolio
+
+1. **Hero** - Presentación personal con animación de typing
+2. **About** - Información profesional y personal
+3. **Projects** - Portafolio de proyectos desarrollados
+4. **Skills** - Habilidades técnicas organizadas por categorías
+5. **Contact** - Enlaces de contacto profesional
+
+## 🚀 Instalación y Desarrollo
+
+```bash
+# Clonar repositorio
+git clone https://github.com/FLAranoHerrera/mi-portfolio.git
+
+# Instalar dependencias
+npm install
+
+# Servidor de desarrollo
+npm run dev
+
+# Build de producción
+npm run build
+
+# Linting
+npm run lint
+```
+
+## 🌐 Demo en Vivo
+
+**Portfolio disponible en**: [https://flaranoherrera.github.io/mi-portfolio](https://flaranoherrera.github.io/mi-portfolio)
+
+## 📧 Contacto
+
+- **Email**: aranoherrera92@gmail.com
+- **LinkedIn**: [Francisco Leonardo Arano Herrera](https://www.linkedin.com/in/francisco-leonardo-arano-herrera-540198169)
+- **GitHub**: [@FLAranoHerrera](https://github.com/FLAranoHerrera)
+
+## 📄 Licencia
+
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.
+
+---
+
+**Desarrollado con ❤️ por Francisco Arano**

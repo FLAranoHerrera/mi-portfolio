@@ -1,0 +1,35 @@
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Fira Code', monospace;
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f17; /* Fondo oscuro base */
+  color: #e0e0e0;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Colores neón */
+.text-neon-purple { color: #a855f7; }
+.text-neon-cyan { color: #22d3ee; }
+.text-neon-blue { color: #3b82f6; }
+.text-neon-pink { color: #f472b6; }
+
+.bg-neon-purple { background-color: #6b21a8; }
+.bg-neon-blue { background-color: #1e40af; }
+.bg-neon-cyan { background-color: #0e7490; }
+
+.card {
+  @apply bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-xl hover:shadow-neon transition duration-300;
+}
+
+.hover-neon:hover {
+  box-shadow: 0 0 15px #a855f7, 0 0 30px #22d3ee;
+}

@@ -1,6 +1,6 @@
 const projects = [
-  { title: 'Mi Portfolio', description: 'Portfolio personal con React + Vite + Tailwind CDN.', link: 'https://github.com/FLAranoHerrera/mi-portfolio' },
-  { title: 'Gestión de Turnos', description: 'Este es una Backend API como parte de mi especialización en Backend developer con el framework NestJS de arquitectura modular.', link: 'https://github.com/FLAranoHerrera/ecommcerce_m4' },
+  { title: 'Mi Portfolio', description: 'Portfolio personal con React + Vite + Tailwind.', link: 'https://github.com/FLAranoHerrera/mi-portfolio' },
+  { title: 'Backend de Ecommerce con Nestjs', description: 'Este es una Backend API como parte de mi especialización en Backend developer con el framework NestJS de arquitectura modular.', link: 'https://ecommerce-flarano-herrera.onrender.com/api' },
   { title: 'Ecommerce Lienzo Culinario', description: 'Backend API para el proyecto Lienzo Culinario, desarrollado como parte del programa Full Stack Developer de Henry. Esta API proporciona funcionalidades completas para una plataforma de delivery de comida.', link: 'https://lienzofront.vercel.app' },
 
 ];

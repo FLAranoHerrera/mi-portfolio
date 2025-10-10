@@ -3,14 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    <!-- Preconnect para optimización -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <!-- Meta tags básicos -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio de Francisco Leonardo Arano Herrera</title>
+    <meta name="description" content="Francisco Arano - Desarrollador Fullstack especializado en NestJS, React y TypeScript. Portfolio profesional con proyectos de ecommerce, APIs REST y aplicaciones web modernas." />
+    <meta name="keywords" content="desarrollador fullstack, NestJS, React, TypeScript, JavaScript, backend developer, frontend developer, portfolio, Francisco Arano, Veracruz México" />
+    <meta name="author" content="Francisco Leonardo Arano Herrera" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://flaranoherrera.github.io/mi-portfolio/" />
+    <meta property="og:title" content="Francisco Arano - Desarrollador Fullstack | Portfolio Profesional" />
+    <meta property="og:description" content="Desarrollador Fullstack especializado en NestJS, React y TypeScript. Construyendo aplicaciones web modernas y APIs robustas." />
+    <meta property="og:image" content="https://flaranoherrera.github.io/mi-portfolio/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://flaranoherrera.github.io/mi-portfolio/" />
+    <meta property="twitter:title" content="Francisco Arano - Desarrollador Fullstack" />
+    <meta property="twitter:description" content="Desarrollador Fullstack especializado en NestJS, React y TypeScript. Portfolio profesional con proyectos destacados." />
+    <meta property="twitter:image" content="https://flaranoherrera.github.io/mi-portfolio/og-image.jpg" />
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Francisco Leonardo Arano Herrera",
+      "jobTitle": "Desarrollador Fullstack",
+      "description": "Desarrollador Fullstack especializado en NestJS, React y TypeScript",
+      "url": "https://flaranoherrera.github.io/mi-portfolio/",
+      "sameAs": [
+        "https://github.com/FLAranoHerrera",
+        "https://www.linkedin.com/in/francisco-leonardo-arano-herrera-540198169"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Veracruz",
+        "addressCountry": "México"
+      },
+      "email": "aranoherrera92@gmail.com",
+      "knowsAbout": ["JavaScript", "TypeScript", "NestJS", "React", "Node.js", "PostgreSQL", "MongoDB"]
+    }
+    </script>
+    
+    <title>Francisco Arano - Desarrollador Fullstack | Portfolio Profesional</title>
   </head>
-  <body class="bg-gray-100 text-gray-800">
-    <div id="root"></div>
+  <body class="bg-gray-900 text-gray-300">
+    <div id="root" role="main" aria-label="Portfolio de Francisco Arano"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

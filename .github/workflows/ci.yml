@@ -33,13 +33,7 @@ jobs:
     - name: Run type checking
       run: npx tsc --noEmit
       
-    - name: Upload coverage reports
-      uses: codecov/codecov-action@v3
-      if: success()
-      with:
-        file: ./coverage/lcov.info
-        flags: unittests
-        name: codecov-umbrella
+    # Coverage report removed for now due to configuration issues
 
   build:
     name: Build Application

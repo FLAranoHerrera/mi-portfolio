@@ -9,6 +9,11 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
     css: true,
+    coverage: {
+      provider: 'c8',
+      reporter: ['text', 'json', 'html'],
+      exclude: ['node_modules/', 'src/test/', 'src/types/', 'src/config/'],
+    },
   },
   resolve: {
     alias: {

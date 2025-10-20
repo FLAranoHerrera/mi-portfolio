@@ -1,29 +1,25 @@
-import { useState } from 'react';
+import { lazy, Suspense } from 'react';
 import Hero from './components/Hero';
-import Projects from './components/Projects';
-import About from './components/About';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
+import LoadingSpinner from './components/LoadingSpinner';
+import SEOHead from './components/SEOHead';
+import GoogleAnalytics from './components/GoogleAnalytics';
+import { useMobileMenu } from './hooks/useMobileMenu';
 
-function App() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+// Lazy loading para componentes pesados
+const About = lazy(() => import('./components/About'));
+const Projects = lazy(() => import('./components/Projects'));
+const Skills = lazy(() => import('./components/Skills'));
+const Contact = lazy(() => import('./components/Contact'));
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+const App: React.FC = () => {
+  const { isMobileMenuOpen, toggleMobileMenu, closeMobileMenu, handleOverlayClick } = useMobileMenu();
+  const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
 
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  // Cerrar menú al hacer clic fuera de él
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      closeMobileMenu();
-    }
-  };
   return (
-    <div className="font-mono bg-gray-900 text-gray-300 min-h-screen">
+    <>
+      <SEOHead />
+      {GA_ID && GA_ID !== 'G-XXXXXXXXXX' && <GoogleAnalytics measurementId={GA_ID} />}
+      <div className="font-mono bg-gray-900 text-gray-300 min-h-screen">
       {/* Navegación */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-700">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,12 +132,21 @@ function App() {
       {/* Contenido principal */}
       <main>
         <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
+        <Suspense fallback={<LoadingSpinner color="neon-cyan" text="Cargando información personal..." />}>
+          <About />
+        </Suspense>
+        <Suspense fallback={<LoadingSpinner color="neon-purple" text="Cargando proyectos..." />}>
+          <Projects />
+        </Suspense>
+        <Suspense fallback={<LoadingSpinner color="neon-pink" text="Cargando habilidades..." />}>
+          <Skills />
+        </Suspense>
+        <Suspense fallback={<LoadingSpinner color="neon-blue" text="Cargando información de contacto..." />}>
+          <Contact />
+        </Suspense>
       </main>
-    </div>
+      </div>
+    </>
   );
 }
 

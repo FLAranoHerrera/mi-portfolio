@@ -1,0 +1,48 @@
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#bgGradient)" rx="12"/>
+  
+  <!-- Header -->
+  <rect x="20" y="20" width="360" height="40" fill="#374151" rx="8"/>
+  <text x="200" y="45" text-anchor="middle" fill="#ef4444" font-family="Fira Code, monospace" font-size="16" font-weight="bold">Sushi POS - Daruma Ramen</text>
+  
+  <!-- POS Interface -->
+  <rect x="30" y="80" width="160" height="120" fill="#1f2937" rx="8" stroke="#ef4444" stroke-width="2"/>
+  <text x="40" y="100" fill="#ef4444" font-family="Fira Code, monospace" font-size="12" font-weight="bold">🍣 Menú Sushi</text>
+  <rect x="40" y="110" width="140" height="25" fill="#374151" rx="4"/>
+  <text x="45" y="128" fill="#f59e0b" font-family="Fira Code, monospace" font-size="10">Sashimi Salmón - $25.00</text>
+  <rect x="40" y="140" width="140" height="25" fill="#374151" rx="4"/>
+  <text x="45" y="158" fill="#f59e0b" font-family="Fira Code, monospace" font-size="10">Roll California - $18.00</text>
+  <rect x="40" y="170" width="140" height="25" fill="#374151" rx="4"/>
+  <text x="45" y="188" fill="#f59e0b" font-family="Fira Code, monospace" font-size="10">Tempura Mixto - $22.00</text>
+  
+  <!-- Employee Management -->
+  <rect x="210" y="80" width="160" height="120" fill="#1f2937" rx="8" stroke="#f59e0b" stroke-width="2"/>
+  <text x="220" y="100" fill="#f59e0b" font-family="Fira Code, monospace" font-size="12" font-weight="bold">👥 Asistencia Empleados</text>
+  <rect x="220" y="110" width="140" height="20" fill="#374151" rx="4"/>
+  <text x="225" y="125" fill="#ef4444" font-family="Fira Code, monospace" font-size="10">✅ Check-in: 08:00 AM</text>
+  <rect x="220" y="135" width="140" height="20" fill="#374151" rx="4"/>
+  <text x="225" y="150" fill="#ef4444" font-family="Fira Code, monospace" font-size="10">⏰ Horas: 8h 30m</text>
+  <rect x="220" y="160" width="140" height="20" fill="#374151" rx="4"/>
+  <text x="225" y="175" fill="#ef4444" font-family="Fira Code, monospace" font-size="10">📊 Estado: On Time</text>
+  <rect x="220" y="185" width="140" height="15" fill="#10b981" rx="3"/>
+  <text x="225" y="197" fill="#000" font-family="Fira Code, monospace" font-size="9">🚀 Deployed on Render</text>
+  
+  <!-- Tech Stack -->
+  <text x="30" y="220" fill="#6b7280" font-family="Fira Code, monospace" font-size="10">NestJS • TypeScript • PostgreSQL • Stripe • Docker • Render</text>
+  
+  <!-- Status Badge -->
+  <rect x="320" y="200" width="60" height="20" fill="#10b981" rx="10"/>
+  <text x="350" y="213" text-anchor="middle" fill="#000" font-family="Fira Code, monospace" font-size="10" font-weight="bold">LIVE</text>
+</svg>

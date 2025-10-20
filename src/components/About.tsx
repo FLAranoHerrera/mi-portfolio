@@ -1,4 +1,6 @@
-function About() {
+import React from 'react';
+
+const About: React.FC = React.memo(() => {
   return (
     <section className="py-20 bg-gray-800" id="about" role="region" aria-label="Información sobre Francisco Arano">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -139,6 +141,8 @@ function About() {
       </div>
     </section>
   );
-}
+});
+
+About.displayName = 'About';
 
 export default About;

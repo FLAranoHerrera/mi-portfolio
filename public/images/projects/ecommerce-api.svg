@@ -1,0 +1,39 @@
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#bgGradient)" rx="12"/>
+  
+  <!-- Header -->
+  <rect x="20" y="20" width="360" height="40" fill="#374151" rx="8"/>
+  <text x="200" y="45" text-anchor="middle" fill="#22d3ee" font-family="Fira Code, monospace" font-size="16" font-weight="bold">Ecommerce API - NestJS</text>
+  
+  <!-- API Endpoints -->
+  <rect x="30" y="80" width="340" height="30" fill="#1f2937" rx="4" stroke="#22d3ee" stroke-width="1"/>
+  <text x="40" y="100" fill="#22d3ee" font-family="Fira Code, monospace" font-size="12">GET /api/products</text>
+  <text x="200" y="100" fill="#10b981" font-family="Fira Code, monospace" font-size="12">200 OK</text>
+  
+  <rect x="30" y="120" width="340" height="30" fill="#1f2937" rx="4" stroke="#a855f7" stroke-width="1"/>
+  <text x="40" y="140" fill="#a855f7" font-family="Fira Code, monospace" font-size="12">POST /api/auth/login</text>
+  <text x="200" y="140" fill="#10b981" font-family="Fira Code, monospace" font-size="12">201 Created</text>
+  
+  <rect x="30" y="160" width="340" height="30" fill="#1f2937" rx="4" stroke="#f472b6" stroke-width="1"/>
+  <text x="40" y="180" fill="#f472b6" font-family="Fira Code, monospace" font-size="12">POST /api/payments/stripe</text>
+  <text x="200" y="180" fill="#10b981" font-family="Fira Code, monospace" font-size="12">200 OK</text>
+  
+  <!-- Tech Stack -->
+  <text x="30" y="210" fill="#6b7280" font-family="Fira Code, monospace" font-size="10">NestJS • TypeScript • PostgreSQL • JWT • Stripe</text>
+  
+  <!-- Status Badge -->
+  <rect x="320" y="200" width="60" height="20" fill="#10b981" rx="10"/>
+  <text x="350" y="213" text-anchor="middle" fill="#000" font-family="Fira Code, monospace" font-size="10" font-weight="bold">LIVE</text>
+</svg>

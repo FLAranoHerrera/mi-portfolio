@@ -1,4 +1,6 @@
-function Contact() {
+import React from 'react';
+
+const Contact: React.FC = React.memo(() => {
   return (
     <section className="py-20 bg-gray-900" id="contact" role="region" aria-label="Información de contacto">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,6 +166,8 @@ function Contact() {
       </div>
     </section>
   );
-}
+});
+
+Contact.displayName = 'Contact';
 
 export default Contact;

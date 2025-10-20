@@ -1,4 +1,6 @@
-function Hero() {
+import React from 'react';
+
+const Hero: React.FC = React.memo(() => {
   return (
     <section 
       className="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden"
@@ -60,7 +62,8 @@ function Hero() {
       </div>
     </section>
   );
-}
+});
 
+Hero.displayName = 'Hero';
 
 export default Hero;

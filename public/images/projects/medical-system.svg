@@ -1,0 +1,58 @@
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#bgGradient)" rx="12"/>
+  
+  <!-- Header -->
+  <rect x="20" y="20" width="360" height="40" fill="#374151" rx="8"/>
+  <text x="200" y="45" text-anchor="middle" fill="#10b981" font-family="Fira Code, monospace" font-size="16" font-weight="bold">Sistema de Turnos Médicos</text>
+  
+  <!-- Calendar Interface -->
+  <rect x="30" y="80" width="160" height="120" fill="#1f2937" rx="8" stroke="#10b981" stroke-width="2"/>
+  <text x="40" y="100" fill="#10b981" font-family="Fira Code, monospace" font-size="12" font-weight="bold">📅 Calendario de Turnos</text>
+  <rect x="40" y="110" width="20" height="20" fill="#374151" rx="3"/>
+  <text x="50" y="125" text-anchor="middle" fill="#22d3ee" font-family="Fira Code, monospace" font-size="10">L</text>
+  <rect x="70" y="110" width="20" height="20" fill="#10b981" rx="3"/>
+  <text x="80" y="125" text-anchor="middle" fill="#000" font-family="Fira Code, monospace" font-size="10">M</text>
+  <rect x="100" y="110" width="20" height="20" fill="#374151" rx="3"/>
+  <text x="110" y="125" text-anchor="middle" fill="#22d3ee" font-family="Fira Code, monospace" font-size="10">M</text>
+  <rect x="130" y="110" width="20" height="20" fill="#374151" rx="3"/>
+  <text x="140" y="125" text-anchor="middle" fill="#22d3ee" font-family="Fira Code, monospace" font-size="10">J</text>
+  <rect x="160" y="110" width="20" height="20" fill="#374151" rx="3"/>
+  <text x="170" y="125" text-anchor="middle" fill="#22d3ee" font-family="Fira Code, monospace" font-size="10">V</text>
+  
+  <rect x="40" y="140" width="140" height="30" fill="#374151" rx="4"/>
+  <text x="45" y="160" fill="#22d3ee" font-family="Fira Code, monospace" font-size="10">Dr. García - 09:00 AM</text>
+  
+  <rect x="40" y="180" width="140" height="30" fill="#374151" rx="4"/>
+  <text x="45" y="200" fill="#22d3ee" font-family="Fira Code, monospace" font-size="10">Dr. López - 11:30 AM</text>
+  
+  <!-- Patient Profile -->
+  <rect x="210" y="80" width="160" height="120" fill="#1f2937" rx="8" stroke="#22d3ee" stroke-width="2"/>
+  <text x="220" y="100" fill="#22d3ee" font-family="Fira Code, monospace" font-size="12" font-weight="bold">👤 Perfil del Paciente</text>
+  <rect x="220" y="110" width="140" height="20" fill="#374151" rx="4"/>
+  <text x="225" y="125" fill="#10b981" font-family="Fira Code, monospace" font-size="10">📧 Email: paciente@email.com</text>
+  <rect x="220" y="135" width="140" height="20" fill="#374151" rx="4"/>
+  <text x="225" y="150" fill="#10b981" font-family="Fira Code, monospace" font-size="10">📱 Teléfono: +52 123-456-7890</text>
+  <rect x="220" y="160" width="140" height="20" fill="#374151" rx="4"/>
+  <text x="225" y="175" fill="#10b981" font-family="Fira Code, monospace" font-size="10">🏥 Historial Médico</text>
+  <rect x="220" y="185" width="140" height="15" fill="#10b981" rx="3"/>
+  <text x="225" y="197" fill="#000" font-family="Fira Code, monospace" font-size="9">✅ Notificación Enviada</text>
+  
+  <!-- Tech Stack -->
+  <text x="30" y="220" fill="#6b7280" font-family="Fira Code, monospace" font-size="10">Node.js • TypeScript • React • PostgreSQL • JWT</text>
+  
+  <!-- Status Badge -->
+  <rect x="320" y="200" width="60" height="20" fill="#f59e0b" rx="10"/>
+  <text x="350" y="213" text-anchor="middle" fill="#000" font-family="Fira Code, monospace" font-size="10" font-weight="bold">DONE</text>
+</svg>

@@ -21,7 +21,7 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm ci
+      run: npm ci --legacy-peer-deps
       
     - name: Run tests
       run: npm run test:run
@@ -32,10 +32,5 @@ jobs:
     - name: Build application
       run: npm run build
       
-    - name: Auto-merge PR
-      uses: fastify/github-action-merge-dependabot@v3
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        target: minor
-        merge-method: squash
-        merge-unstable: false
+    # Auto-merge removed to prevent conflicts
+    # Dependabot PRs will be reviewed manually

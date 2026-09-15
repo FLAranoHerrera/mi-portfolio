@@ -10,8 +10,9 @@ export default defineConfig({
     setupFiles: ['./src/test/setup.ts'],
     css: true,
     coverage: {
-      provider: 'c8',
+      provider: 'v8',
       reporter: ['text', 'json', 'html'],
+      include: ['src/components/**', 'src/hooks/**', 'src/App.tsx'],
       exclude: ['node_modules/', 'src/test/', 'src/types/', 'src/config/'],
     },
   },

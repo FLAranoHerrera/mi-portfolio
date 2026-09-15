@@ -2,12 +2,6 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import { describe, it, expect, vi } from 'vitest'
 import App from '@/App'
 
-// Mock react-helmet-async
-vi.mock('react-helmet-async', () => ({
-  HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
-  Helmet: () => null,
-}))
-
 // Mock the components to isolate App testing
 vi.mock('@/components/Hero', () => ({
   default: () => <div data-testid="hero">Hero Component</div>

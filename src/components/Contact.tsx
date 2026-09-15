@@ -160,7 +160,7 @@ const Contact: React.FC = React.memo(() => {
             Desarrollado con ❤️ por <span className="text-neon-cyan font-bold">Francisco Arano</span>
           </p>
           <p className="text-sm text-gray-500">
-            © 2025 Francisco Leonardo Arano Herrera. Todos los derechos reservados.
+            © {new Date().getFullYear()} Francisco Leonardo Arano Herrera. Todos los derechos reservados.
           </p>
         </div>
       </div>

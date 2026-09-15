@@ -3,7 +3,7 @@ import React from 'react';
 const Hero: React.FC = React.memo(() => {
   return (
     <section 
-      className="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden"
+      className="min-h-screen px-4 pt-24 pb-28 flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden"
       role="banner"
       aria-label="Presentación principal"
     >
@@ -21,16 +21,12 @@ const Hero: React.FC = React.memo(() => {
         </h1>
         
         <div className="mb-8">
-          <img
-            src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=500&color=22d3ee&center=true&vCenter=true&width=600&lines=Fullstack+Developer;Backend+Specialist+%7C+NestJS;Frontend+Expert+%7C+React+%26+TypeScript;Building+Scalable+APIs;Creating+Modern+Web+Apps"
-            alt="Francisco Arano - Desarrollador Fullstack especializado en NestJS, React y TypeScript"
-            className="mx-auto"
-          />
+          <p className="text-xl sm:text-2xl text-neon-cyan">Full Stack Developer · Enfoque en backend</p>
         </div>
         
         <div className="max-w-3xl mx-auto space-y-4 text-lg sm:text-xl">
           <p className="text-neon-cyan font-semibold animate-slide-up">
-            🚀 Desarrollador Fullstack especializado en arquitecturas escalables
+            🚀 Desarrollo de software, APIs e integraciones SaaS
           </p>
           <p className="text-gray-300 animate-slide-up delay-200">
             Construyendo aplicaciones web modernas con <span className="text-neon-blue font-bold">NestJS</span>, 

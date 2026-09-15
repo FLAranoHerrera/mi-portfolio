@@ -25,12 +25,10 @@ const Projects: React.FC = React.memo(() => {
               aria-label={`Proyecto: ${project.title}`}
             >
               <div className="relative overflow-hidden">
-                <div className="w-full h-48 bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-4xl mb-2">🚀</div>
-                      <div className="text-gray-400 text-sm font-mono">Proyecto Destacado</div>
-                    </div>
-                </div>
+                <img src={`${import.meta.env.BASE_URL}${project.image.replace(/^\//, '')}`}
+                  alt={`Captura de ${project.title}`} width="1280" height="720"
+                  loading="lazy" decoding="async" className="w-full aspect-video object-cover object-top"
+                  onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = `${import.meta.env.BASE_URL}images/projects/portfolio.svg`; }} />
                 <div className="absolute top-4 right-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-bold ${
                     project.status === 'Production' 

@@ -16,7 +16,7 @@ const Skills: React.FC = React.memo(() => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {Object.entries(skills).map(([key, category], idx) => (
+          {Object.entries(skills).map(([key, category]) => (
             <div 
               key={key}
               className="group bg-gray-900 border border-gray-700 rounded-2xl p-8 shadow-xl hover:shadow-neon transition-all duration-500 transform hover:scale-105"
@@ -101,7 +101,7 @@ const Skills: React.FC = React.memo(() => {
               <div className="text-3xl mb-3">🚀</div>
               <h4 className="text-lg font-bold text-neon-cyan mb-2">Proyectos en Producción</h4>
               <p className="text-gray-300 text-sm">3+ Aplicaciones Live</p>
-              <p className="text-xs text-gray-400 mt-1">99.9% Uptime</p>
+              <p className="text-xs text-gray-400 mt-1">APIs e integraciones</p>
             </div>
             <div className="text-center p-6 bg-gray-800 rounded-xl">
               <div className="text-3xl mb-3">👥</div>

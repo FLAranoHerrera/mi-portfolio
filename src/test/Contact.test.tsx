@@ -59,7 +59,7 @@ describe('Contact Component', () => {
     
     expect(screen.getByText('Desarrollado con ❤️ por')).toBeInTheDocument()
     expect(screen.getByText('Francisco Arano')).toBeInTheDocument()
-    expect(screen.getByText(/© 2025 Francisco Leonardo Arano Herrera/)).toBeInTheDocument()
+    expect(screen.getByText(new RegExp(`© ${new Date().getFullYear()} Francisco Leonardo Arano Herrera`))).toBeInTheDocument()
   })
 
   it('has proper accessibility attributes', () => {

@@ -1,15 +1,12 @@
-import { lazy, Suspense } from 'react';
 import Hero from './components/Hero';
-import LoadingSpinner from './components/LoadingSpinner';
-import SEOHead from './components/SEOHead';
 import GoogleAnalytics from './components/GoogleAnalytics';
 import { useMobileMenu } from './hooks/useMobileMenu';
 
-// Lazy loading para componentes pesados
-const About = lazy(() => import('./components/About'));
-const Projects = lazy(() => import('./components/Projects'));
-const Skills = lazy(() => import('./components/Skills'));
-const Contact = lazy(() => import('./components/Contact'));
+// Secciones estáticas del portfolio
+import About from './components/About';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Contact from './components/Contact';
 
 const App: React.FC = () => {
   const { isMobileMenuOpen, toggleMobileMenu, closeMobileMenu, handleOverlayClick } = useMobileMenu();
@@ -17,7 +14,6 @@ const App: React.FC = () => {
 
   return (
     <>
-      <SEOHead />
       {GA_ID && GA_ID !== 'G-XXXXXXXXXX' && <GoogleAnalytics measurementId={GA_ID} />}
       <div className="font-mono bg-gray-900 text-gray-300 min-h-screen">
       {/* Navegación */}
@@ -132,18 +128,10 @@ const App: React.FC = () => {
       {/* Contenido principal */}
       <main>
         <Hero />
-        <Suspense fallback={<LoadingSpinner color="neon-cyan" text="Cargando información personal..." />}>
           <About />
-        </Suspense>
-        <Suspense fallback={<LoadingSpinner color="neon-purple" text="Cargando proyectos..." />}>
           <Projects />
-        </Suspense>
-        <Suspense fallback={<LoadingSpinner color="neon-pink" text="Cargando habilidades..." />}>
           <Skills />
-        </Suspense>
-        <Suspense fallback={<LoadingSpinner color="neon-blue" text="Cargando información de contacto..." />}>
           <Contact />
-        </Suspense>
       </main>
       </div>
     </>

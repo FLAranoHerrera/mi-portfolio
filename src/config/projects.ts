@@ -11,9 +11,9 @@ export const PROJECTS_DATA: ProjectsData = {
       category: 'Backend',
       link: 'https://ecommerce-flarano-herrera.onrender.com/api',
       github: 'https://github.com/FLAranoHerrera/ecommcerce_m4',
-      image: '/images/projects/ecommerce-api.svg',
+      image: '/images/projects/ecommerce-api.jpg',
       status: 'Production',
-      metrics: '56 Commits • 99.9% Uptime • 2.5s Response Time',
+      metrics: '',
       achievements: ['Autenticación JWT completa', 'Integración con Stripe', 'Documentación Swagger', 'Deploy en Render']
     },
     {
@@ -25,9 +25,9 @@ export const PROJECTS_DATA: ProjectsData = {
       category: 'Fullstack',
       link: 'https://lienzofront.vercel.app',
       github: 'https://github.com/lienzoculinariog2/nuevolienzoback-',
-      image: '/images/projects/lienzo-culinario.svg',
+      image: '/images/projects/lienzo-culinario.jpg',
       status: 'Production',
-      metrics: '132 Commits • 5 Contributors • 500+ Users',
+      metrics: '',
       achievements: ['Proyecto colaborativo', 'Integración con Stripe', 'Sistema de reseñas', 'Gestión de ingredientes']
     },
     {
@@ -39,9 +39,9 @@ export const PROJECTS_DATA: ProjectsData = {
       category: 'Fullstack',
       link: 'https://sushi-pos-frontend.vercel.app',
       github: 'https://github.com/FLAranoHerrera/sushi-pos-backend',
-      image: '/images/projects/sushi-pos.svg',
+      image: '/images/projects/sushi-pos.jpg',
       status: 'Production',
-      metrics: '50+ Commits • 98.9% TypeScript • Deployed on Render',
+      metrics: '',
       achievements: ['Sistema de asistencia automático', 'Integración con Stripe', 'Arquitectura modular', 'Despliegue en producción', 'Docker containerizado']
     }
   ],
@@ -57,7 +57,7 @@ export const PROJECTS_DATA: ProjectsData = {
       github: 'https://github.com/FLAranoHerrera/PM3-FLAranoHerrera',
       image: '/images/projects/medical-system.svg',
       status: 'Completed',
-      metrics: '26 Commits • 49.5% TypeScript • Security Focused',
+      metrics: '',
       achievements: ['Autenticación JWT segura', 'Notificaciones por email', 'Gestión de perfil', 'Validaciones de horario']
     },
     {
@@ -70,7 +70,7 @@ export const PROJECTS_DATA: ProjectsData = {
       github: 'https://github.com/FLAranoHerrera/PM2-FLAranoHerrera',
       image: '/images/projects/cinema-explorer.svg',
       status: 'Completed',
-      metrics: '17 Commits • 56.7% JavaScript • Testing Complete',
+      metrics: '',
       achievements: ['CRUD completo', 'Búsqueda avanzada', 'Testing con Jest', 'MongoDB Atlas']
     },
     {
@@ -83,7 +83,7 @@ export const PROJECTS_DATA: ProjectsData = {
       github: 'https://github.com/FLAranoHerrera/PM1-FLAranoHerrera',
       image: '/images/projects/personal-website.svg',
       status: 'Completed',
-      metrics: '13 Commits • 42.4% CSS • 40.3% JavaScript',
+      metrics: '',
       achievements: ['CRUD completo', 'Barras de progreso animadas', 'Persistencia localStorage', 'Diseño responsive']
     },
     {
@@ -96,20 +96,20 @@ export const PROJECTS_DATA: ProjectsData = {
       github: 'https://github.com/FLAranoHerrera/PM0-FLAranoHerrera',
       image: '/images/projects/security-system.svg',
       status: 'Completed',
-      metrics: '42.6% JavaScript • 31.3% HTML • 26.1% CSS',
+      metrics: '',
       achievements: ['Arquitectura modular', 'Sistema de seguridad', 'Proyecto educativo', 'Herramientas de build']
     },
     {
       id: 8,
       title: 'Portfolio Profesional Avanzado',
-      description: 'Portfolio personal con diseño gaming, optimizado para SEO, accesibilidad completa, testing automatizado y CI/CD.',
+      description: 'Portfolio personal con diseño gaming, optimizado para SEO, mejoras de accesibilidad, testing automatizado y CI/CD.',
       longDescription: 'Portfolio profesional desarrollado con React 19, TypeScript y Vite. Incluye lazy loading de componentes, optimizaciones de rendimiento con React.memo, testing completo con Vitest y Testing Library, SEO avanzado con React Helmet, headers de seguridad, CI/CD con GitHub Actions, imágenes SVG personalizadas y diseño responsive con TailwindCSS.',
-      technologies: ['React 19', 'TypeScript', 'Vite 7', 'TailwindCSS', 'Vitest', 'Testing Library', 'React Helmet', 'GitHub Actions', 'SEO', 'Accessibility'],
+      technologies: ['React 19', 'TypeScript', 'Vite 7', 'TailwindCSS', 'Vitest', 'Testing Library', 'GitHub Actions', 'SEO', 'Accessibility'],
       category: 'Frontend',
       github: 'https://github.com/FLAranoHerrera/mi-portfolio',
       image: '/images/projects/portfolio.svg',
       status: 'Production',
-      metrics: '48 Tests • 100% TypeScript • CI/CD Pipeline • Security Headers',
+      metrics: '',
       achievements: ['Testing automatizado completo', 'CI/CD con GitHub Actions', 'SEO optimizado', 'Headers de seguridad', 'Lazy loading implementado']
     }
   ]

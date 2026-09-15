@@ -16,96 +16,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Colores neón */
-.text-neon-purple { color: #a855f7; }
-.text-neon-cyan { color: #22d3ee; }
-.text-neon-blue { color: #3b82f6; }
-.text-neon-pink { color: #f472b6; }
-
-.bg-neon-purple { background-color: #6b21a8; }
-.bg-neon-blue { background-color: #1e40af; }
-.bg-neon-cyan { background-color: #0e7490; }
-.bg-neon-pink { background-color: #be185d; }
-
-.card {
-  @apply bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-xl hover:shadow-neon transition duration-300;
-}
-
-.hover-neon:hover {
-  box-shadow: 0 0 15px #a855f7, 0 0 30px #22d3ee;
-}
-
-/* Animaciones personalizadas */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 5px #a855f7, 0 0 10px #22d3ee;
-  }
-  50% {
-    box-shadow: 0 0 20px #a855f7, 0 0 30px #22d3ee, 0 0 40px #f472b6;
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes pulse-neon {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-/* Clases de animación */
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-out;
-}
-
-.animate-slide-up {
-  animation: slideUp 0.6s ease-out;
-}
-
-.animate-glow {
-  animation: glow 2s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-pulse-neon {
-  animation: pulse-neon 2s ease-in-out infinite;
-}
-
 /* Delays para animaciones escalonadas */
 .delay-200 {
   animation-delay: 0.2s;
@@ -172,4 +82,10 @@ html {
 /* Transiciones suaves */
 .transition-all {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+section[id] { scroll-margin-top: 5rem; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }

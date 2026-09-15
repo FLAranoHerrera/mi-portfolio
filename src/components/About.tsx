@@ -20,20 +20,20 @@ const About: React.FC = React.memo(() => {
               <h3 className="text-2xl font-bold mb-6 text-neon-cyan">🚀 Mi Historia</h3>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  Soy <span className="text-neon-cyan font-bold">Francisco Leonardo Arano Herrera</span>, 
-                  un desarrollador <span className="text-neon-pink font-bold">Fullstack</span> especializado 
+                  Soy <span className="text-neon-cyan font-bold">Francisco Leonardo Arano Herrera</span>,
+                  un desarrollador <span className="text-neon-pink font-bold">Fullstack</span> especializado
                   en arquitecturas escalables y aplicaciones web modernas.
                 </p>
                 <p>
-                  Mi expertise principal se centra en el desarrollo <span className="text-neon-blue font-bold">Backend </span> 
-                  utilizando <span className="text-neon-purple font-bold">NestJS</span>, TypeScript y bases de datos 
-                  relacionales, complementado con experiencia sólida en <span className="text-neon-pink font-bold">Frontend </span> 
+                  Mi experiencia principal se centra en el desarrollo <span className="text-neon-blue font-bold">Backend </span>
+                  utilizando <span className="text-neon-purple font-bold">NestJS</span>, TypeScript y bases de datos
+                  relacionales, complementado con experiencia sólida en <span className="text-neon-pink font-bold">Frontend </span>
                   con React, Vite y frameworks CSS modernos.
                 </p>
                 <p>
-                  Me apasiona resolver problemas complejos, optimizar performance y crear experiencias 
-                  de usuario excepcionales. Siempre busco aprender nuevas tecnologías y mantenerme 
-                  actualizado con las mejores prácticas de la industria.
+                  Desde noviembre de 2025 trabajo como desarrollador Full Stack en Peek Softworks.
+                  Desarrollo una plataforma SaaS para transporte público: APIs, autenticación,
+                  integraciones de pagos y geolocalización, interfaces web y despliegues con Docker y DigitalOcean.
                 </p>
               </div>
             </div>

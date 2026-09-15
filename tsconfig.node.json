@@ -1,11 +1,16 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "skipLibCheck": true,
+    "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true,
-    "strict": true
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": [
+      "node"
+    ]
   },
-  "include": ["vite.config.js", "tailwind.config.js", "postcss.config.js", "eslint.config.js", "vitest.config.ts"]
+  "include": [
+    "vitest.config.ts"
+  ]
 }

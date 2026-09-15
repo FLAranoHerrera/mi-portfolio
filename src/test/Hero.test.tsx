@@ -10,10 +10,10 @@ describe('Hero Component', () => {
     expect(screen.getByText('Francisco Arano')).toBeInTheDocument()
   })
 
-  it('renders the typing animation element', () => {
+  it('renders the professional focus', () => {
     render(<Hero />)
     
-    const typingElement = screen.getByAltText(/Francisco Arano - Desarrollador Fullstack/)
+    const typingElement = screen.getByText(/Full Stack Developer · Enfoque en backend/)
     expect(typingElement).toBeInTheDocument()
   })
 
@@ -42,7 +42,7 @@ describe('Hero Component', () => {
   it('renders all descriptive text', () => {
     render(<Hero />)
     
-    expect(screen.getByText(/Desarrollador Fullstack especializado en arquitecturas escalables/)).toBeInTheDocument()
+    expect(screen.getByText(/Desarrollo de software, APIs e integraciones SaaS/)).toBeInTheDocument()
     expect(screen.getByText(/Construyendo aplicaciones web modernas/)).toBeInTheDocument()
     expect(screen.getByText(/Código limpio • 🎮 Gaming enthusiast • 🏋️ Fitness lover/)).toBeInTheDocument()
   })

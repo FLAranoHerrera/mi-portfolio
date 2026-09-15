@@ -1,53 +1,35 @@
 import { useEffect } from 'react';
 
-interface GoogleAnalyticsProps {
-  measurementId: string;
-}
-
-const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({ measurementId }) => {
-  useEffect(() => {
-    // Load Google Analytics script
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-    document.head.appendChild(script);
-
-    // Initialize gtag
-    window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
-      window.dataLayer.push(args);
-    }
-    gtag('js', new Date());
-    gtag('config', measurementId, {
-      page_title: 'Francisco Arano - Portfolio',
-      page_location: window.location.href,
-    });
-
-    // Track page views on route changes
-    const handleRouteChange = () => {
-      gtag('config', measurementId, {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
-    };
-
-    // Listen for hash changes (since this is a single-page app with hash navigation)
-    window.addEventListener('hashchange', handleRouteChange);
-
-    return () => {
-      window.removeEventListener('hashchange', handleRouteChange);
-    };
-  }, [measurementId]);
-
-  return null;
-};
-
-// Extend Window interface for gtag
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer?: unknown[];
+    portfolioAnalyticsId?: string;
   }
 }
 
-export default GoogleAnalytics;
+export default function GoogleAnalytics({ measurementId }: { measurementId: string }) {
+  useEffect(() => {
+    if (!/^G-[A-Z0-9]+$/.test(measurementId) || measurementId === 'G-XXXXXXXXXX') return;
+    // Queue commands in the format expected by gtag; initialize once across StrictMode remounts.
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    function gtag(..._args: unknown[]) {
+      window.dataLayer ??= [];
+      // gtag expects an Arguments object for each queued command.
+      // eslint-disable-next-line prefer-rest-params
+      window.dataLayer.push(arguments);
+    }
+    if (window.portfolioAnalyticsId !== measurementId) {
+      document.getElementById('portfolio-analytics')?.remove();
+      const script = document.createElement('script');
+      script.id = 'portfolio-analytics';
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+      document.head.appendChild(script);
+      gtag('js', new Date());
+      gtag('config', measurementId);
+      window.portfolioAnalyticsId = measurementId;
+    }
+    // Enhanced Measurement may track history changes; avoid sending duplicate manual page views.
+  }, [measurementId]);
+  return null;
+}

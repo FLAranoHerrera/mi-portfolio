@@ -37,11 +37,13 @@ Ejecuta ESLint, TypeScript, tests con cobertura y build. También están disponi
 
 ## Mantenimiento
 
+El recorrido es presentación, experiencia, proyectos, stack y contacto. Los proyectos secundarios se agrupan en un desplegable. El CV se conserva en `public/cv/`; actualizarlo al cambiar la experiencia profesional.
+
 Actualizar proyectos en `src/config/projects.ts` y habilidades en `src/config/skills.ts`. Las imágenes deben existir en `public/`; sus URLs en React incorporan `import.meta.env.BASE_URL` para GitHub Pages. No publicar métricas de usuarios, rendimiento o disponibilidad sin evidencia.
 
 La presentación profesional se edita en Hero y About. Los metadatos y la imagen social se editan en `index.html`; el sitemap contiene la página principal, no enlaces a secciones. Actualizar su fecha cuando cambie el contenido.
 
-Tailwind define los colores y animaciones compartidos. El CSS añade estilos puntuales y soporte para movimiento reducido. Las secciones se cargan juntas y las capturas usan carga diferida nativa del navegador.
+El diseño usa tipografía sans serif para lectura, acentos cian y violeta y estilos en `src/index.css`, con soporte para movimiento reducido. Las secciones se cargan juntas y las capturas usan carga diferida nativa del navegador.
 
 Antes de publicar, revisar pantallas estrechas, navegación por teclado, imágenes, enlaces externos y metadatos. No se afirma un puntaje de Lighthouse sin ejecutar y guardar una auditoría.
 

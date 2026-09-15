@@ -1,65 +1,57 @@
-import React from 'react';
-
-const Hero: React.FC = React.memo(() => {
+export default function Hero() {
   return (
-    <section 
-      className="min-h-screen px-4 pt-24 pb-28 flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden"
-      role="banner"
-      aria-label="Presentación principal"
-    >
-      {/* Efecto de partículas de fondo */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-neon-cyan rounded-full animate-pulse opacity-60"></div>
-        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-neon-purple rounded-full animate-pulse opacity-40"></div>
-        <div className="absolute top-1/2 left-1/3 w-1.5 h-1.5 bg-neon-pink rounded-full animate-pulse opacity-50"></div>
-      </div>
-      
-      <div className="relative z-10">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 text-neon-purple tracking-wide animate-fade-in">
-          <span className="block">¡Hola! Soy</span>
-          <span className="block text-neon-cyan font-mono">Francisco Arano</span>
+    <section className="hero wrap" aria-label="Presentación principal">
+      <div>
+        <p className="eyebrow">FRANCISCO ARANO · FULL STACK DEVELOPER</p>
+        <h1>
+          Software que conecta
+          <br />
+          <span>ideas y operaciones.</span>
         </h1>
-        
-        <div className="mb-8">
-          <p className="text-xl sm:text-2xl text-neon-cyan">Full Stack Developer · Enfoque en backend</p>
-        </div>
-        
-        <div className="max-w-3xl mx-auto space-y-4 text-lg sm:text-xl">
-          <p className="text-neon-cyan font-semibold animate-slide-up">
-            🚀 Desarrollo de software, APIs e integraciones SaaS
-          </p>
-          <p className="text-gray-300 animate-slide-up delay-200">
-            Construyendo aplicaciones web modernas con <span className="text-neon-blue font-bold">NestJS</span>, 
-            <span className="text-neon-purple font-bold"> React</span> y 
-            <span className="text-neon-pink font-bold"> TypeScript</span>
-          </p>
-          <p className="text-neon-pink font-bold animate-slide-up delay-400">
-            💻 Código limpio • 🎮 Gaming enthusiast • 🏋️ Fitness lover
-          </p>
-        </div>
-        
-        {/* CTA Button */}
-        <div className="mt-12 animate-fade-in delay-600">
-          <a 
-            href="#projects" 
-            className="inline-block px-8 py-4 bg-gradient-to-r from-neon-purple to-neon-cyan text-gray-900 font-bold rounded-xl shadow-lg hover:shadow-neon transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-neon-purple focus:ring-opacity-50"
-            aria-label="Ver mis proyectos destacados"
+        <p className="lead">
+          Desarrollo APIs, integraciones y aplicaciones web. Mi enfoque está en
+          el backend y en construir soluciones útiles para productos SaaS.
+        </p>
+        <div className="actions">
+          <a className="button primary" href="#projects">
+            Ver proyectos <span aria-hidden="true">↗</span>
+          </a>
+          <a className="button" href="#contact">
+            Contactar
+          </a>
+          <a
+            className="text-link"
+            href={`${import.meta.env.BASE_URL}cv/Francisco_Arano_CV.pdf`}
+            target="_blank"
+            rel="noreferrer"
           >
-            🎯 Ver Mis Proyectos
+            Ver CV ↗
           </a>
         </div>
+        <p className="availability">
+          <span aria-hidden="true">●</span> Veracruz, México · Abierto a
+          oportunidades remotas
+        </p>
       </div>
-      
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-neon-cyan rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-neon-cyan rounded-full mt-2 animate-pulse"></div>
+      <aside className="hero-note">
+        <span className="eyebrow">ACTUALMENTE</span>
+        <h2>
+          Construyendo
+          <br />
+          con propósito.
+        </h2>
+        <p>Full Stack en Peek Softworks</p>
+        <div className="note-row">
+          <span>01</span> APIs y servicios backend
         </div>
-      </div>
+        <div className="note-row">
+          <span>02</span> Integraciones y datos
+        </div>
+        <div className="note-row">
+          <span>03</span> Experiencias web
+        </div>
+        <p className="mono muted">NestJS / TypeScript / PostgreSQL</p>
+      </aside>
     </section>
   );
-});
-
-Hero.displayName = 'Hero';
-
-export default Hero;
+}

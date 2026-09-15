@@ -1,135 +1,61 @@
-import { render, screen, fireEvent } from '@testing-library/react'
-import { describe, it, expect, vi } from 'vitest'
-import App from '@/App'
+import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, it, expect } from "vitest";
+import App from "@/App";
 
-// Mock the components to isolate App testing
-vi.mock('@/components/Hero', () => ({
-  default: () => <div data-testid="hero">Hero Component</div>
-}))
-
-vi.mock('@/components/About', () => ({
-  default: () => <div data-testid="about">About Component</div>
-}))
-
-vi.mock('@/components/Projects', () => ({
-  default: () => <div data-testid="projects">Projects Component</div>
-}))
-
-vi.mock('@/components/Skills', () => ({
-  default: () => <div data-testid="skills">Skills Component</div>
-}))
-
-vi.mock('@/components/Contact', () => ({
-  default: () => <div data-testid="contact">Contact Component</div>
-}))
-
-describe('App Component', () => {
-  it('renders the main navigation', () => {
-    render(<App />)
-    
-    expect(screen.getByText('Francisco Arano')).toBeInTheDocument()
-    expect(screen.getByText('Sobre Mí')).toBeInTheDocument()
-    expect(screen.getByText('Proyectos')).toBeInTheDocument()
-    expect(screen.getByText('Skills')).toBeInTheDocument()
-    expect(screen.getByText('Contacto')).toBeInTheDocument()
-  })
-
-  it('renders all main components', () => {
-    render(<App />)
-    
-    expect(screen.getByTestId('hero')).toBeInTheDocument()
-    expect(screen.getByTestId('about')).toBeInTheDocument()
-    expect(screen.getByTestId('projects')).toBeInTheDocument()
-    expect(screen.getByTestId('skills')).toBeInTheDocument()
-    expect(screen.getByTestId('contact')).toBeInTheDocument()
-  })
-
-  it('shows mobile menu button on small screens', () => {
-    render(<App />)
-    
-    const mobileMenuButton = screen.getByRole('button', { name: /Abrir menú de navegación/i })
-    expect(mobileMenuButton).toBeInTheDocument()
-  })
-
-  it('toggles mobile menu when button is clicked', () => {
-    render(<App />)
-    
-    const mobileMenuButton = screen.getByRole('button', { name: /Abrir menú de navegación/i })
-    
-    // Initially closed - check aria-expanded
-    expect(mobileMenuButton).toHaveAttribute('aria-expanded', 'false')
-    
-    // Click to open
-    fireEvent.click(mobileMenuButton)
-    expect(mobileMenuButton).toHaveAttribute('aria-expanded', 'true')
-    
-    // Button should now show close icon
-    expect(screen.getByRole('button', { name: /Cerrar menú de navegación/i })).toBeInTheDocument()
-  })
-
-  it('closes mobile menu when close button is clicked', () => {
-    render(<App />)
-    
-    const mobileMenuButton = screen.getByRole('button', { name: /Abrir menú de navegación/i })
-    
-    // Open menu
-    fireEvent.click(mobileMenuButton)
-    expect(mobileMenuButton).toHaveAttribute('aria-expanded', 'true')
-    
-    // Close menu
-    const closeButton = screen.getByRole('button', { name: /Cerrar menú de navegación/i })
-    fireEvent.click(closeButton)
-    
-    expect(mobileMenuButton).toHaveAttribute('aria-expanded', 'false')
-  })
-
-  it('closes mobile menu when clicking on menu items', () => {
-    render(<App />)
-    
-    const mobileMenuButton = screen.getByRole('button', { name: /Abrir menú de navegación/i })
-    
-    // Open menu
-    fireEvent.click(mobileMenuButton)
-    expect(mobileMenuButton).toHaveAttribute('aria-expanded', 'true')
-    
-    // Click on mobile menu item (use getAllByRole to get the mobile version)
-    const aboutLinks = screen.getAllByRole('link', { name: /Ir a la sección Sobre mí/i })
-    const mobileAboutLink = aboutLinks.find(link => link.textContent?.includes('👨‍💻'))
-    expect(mobileAboutLink).toBeInTheDocument()
-    
-    if (mobileAboutLink) {
-      fireEvent.click(mobileAboutLink)
-      expect(mobileMenuButton).toHaveAttribute('aria-expanded', 'false')
+describe("Portfolio navigation and content", () => {
+  it("connects navigation and calls to action to existing sections", () => {
+    render(<App />);
+    for (const link of screen.getAllByRole("link")) {
+      const href = link.getAttribute("href");
+      if (href?.startsWith("#"))
+        expect(document.getElementById(href.slice(1))).not.toBeNull();
     }
-  })
-
-  it('has proper navigation links', () => {
-    render(<App />)
-    
-    // Check desktop navigation links
-    const desktopLinks = screen.getAllByRole('link', { name: /Ir a la sección Sobre mí/i })
-    const desktopAboutLink = desktopLinks.find(link => !link.textContent?.includes('👨‍💻'))
-    expect(desktopAboutLink).toHaveAttribute('href', '#about')
-    
-    const desktopProjectLinks = screen.getAllByRole('link', { name: /Ir a la sección Proyectos/i })
-    const desktopProjectLink = desktopProjectLinks.find(link => !link.textContent?.includes('🚀'))
-    expect(desktopProjectLink).toHaveAttribute('href', '#projects')
-    
-    const desktopSkillLinks = screen.getAllByRole('link', { name: /Ir a la sección Habilidades/i })
-    const desktopSkillLink = desktopSkillLinks.find(link => !link.textContent?.includes('⚡'))
-    expect(desktopSkillLink).toHaveAttribute('href', '#skills')
-    
-    const desktopContactLinks = screen.getAllByRole('link', { name: /Ir a la sección Contacto/i })
-    const desktopContactLink = desktopContactLinks.find(link => !link.textContent?.includes('📞'))
-    expect(desktopContactLink).toHaveAttribute('href', '#contact')
-  })
-
-  it('has proper accessibility attributes', () => {
-    render(<App />)
-    
-    const main = screen.getByRole('main')
-    expect(main).toBeInTheDocument()
-    // Check that the main element exists and has proper structure
-    expect(main).toBeInTheDocument()
-  })
-})
+    expect(screen.getAllByRole("main")).toHaveLength(1);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
+      "Software que conecta",
+    );
+  });
+  it("closes mobile navigation with Escape and restores focus", () => {
+    render(<App />);
+    fireEvent.click(screen.getByRole("button", { name: "Abrir menú" }));
+    const close = screen.getByRole("button", { name: "Cerrar menú" });
+    expect(close).toHaveAttribute("aria-expanded", "true");
+    fireEvent.keyDown(window, { key: "Escape" });
+    expect(screen.getByRole("button", { name: "Abrir menú" })).toHaveFocus();
+    expect(document.getElementById("mobile-nav")).toHaveAttribute("hidden");
+  });
+  it("closes mobile navigation after choosing a section", () => {
+    render(<App />);
+    fireEvent.click(screen.getByRole("button", { name: "Abrir menú" }));
+    fireEvent.click(
+      screen.getAllByRole("link", { name: "Experiencia" }).at(-1)!,
+    );
+    expect(screen.getByRole("button", { name: "Abrir menú" })).toHaveAttribute(
+      "aria-expanded",
+      "false",
+    );
+  });
+  it("provides project screenshots and repository links", () => {
+    render(<App />);
+    expect(screen.getAllByRole("article")).toHaveLength(3);
+    for (const img of screen.getAllByRole("img")) {
+      expect(img.getAttribute("src")).toMatch(/images\/projects\/.+\.jpg$/);
+      expect(img).toHaveAttribute("loading", "lazy");
+      expect(img.getAttribute("alt")).toMatch(/^Captura de/);
+    }
+    expect(screen.getAllByRole("link", { name: /Ver código de/ })).toHaveLength(
+      3,
+    );
+  });
+  it("provides CV and direct contact without a form", () => {
+    render(<App />);
+    expect(screen.getByRole("link", { name: /Ver CV/ })).toHaveAttribute(
+      "href",
+      `${import.meta.env.BASE_URL}cv/Francisco_Arano_CV.pdf`,
+    );
+    expect(screen.getByRole("link", { name: /Escríbeme/ })).toHaveAttribute(
+      "href",
+      "mailto:aranoherrera92@gmail.com",
+    );
+  });
+});

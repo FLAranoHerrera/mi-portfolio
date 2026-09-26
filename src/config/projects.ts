@@ -4,45 +4,52 @@ export const PROJECTS_DATA: ProjectsData = {
   featured: [
     {
       id: 1,
-      title: 'Ecommerce API - NestJS',
-      description: 'API REST completa para plataforma de ecommerce con autenticación JWT, pagos con Stripe, inventario y notificaciones automáticas.',
-      longDescription: 'Backend robusto desarrollado con NestJS que incluye módulos de autenticación, productos, carrito de compras, pagos con Stripe, sistema de notificaciones, documentación Swagger completa y deploy en Render con base de datos Neon.',
-      technologies: ['NestJS', 'TypeScript', 'PostgreSQL', 'JWT', 'Stripe', 'Swagger', 'Cloudinary', 'Docker'],
+      title: 'Backend Ecommerce — API de compras',
+      description: 'API de comercio electrónico con compras transaccionales, control de inventario y autorización por usuario y rol.',
+      longDescription: 'Proyecto individual de especialización con NestJS, PostgreSQL y TypeORM. Incluye autenticación JWT, bloqueo de productos durante la compra, migraciones, pruebas de comportamiento y comprobaciones automáticas en GitHub Actions. No incluye una pasarela de pagos.',
+      contribution: 'Desarrollo y evolución de la API: autenticación, compras, inventario, documentación y pruebas.',
+      technologies: ['NestJS', 'TypeScript', 'PostgreSQL', 'TypeORM', 'JWT', 'Jest', 'Docker', 'GitHub Actions'],
       category: 'Backend',
       link: 'https://ecommerce-flarano-herrera.onrender.com/api',
       github: 'https://github.com/FLAranoHerrera/ecommcerce_m4',
       image: '/images/projects/ecommerce-api.jpg',
-      status: 'Production',
+      status: 'Completed',
       metrics: '',
-      achievements: ['Autenticación JWT completa', 'Integración con Stripe', 'Documentación Swagger', 'Deploy en Render']
+      achievements: ['Compras transaccionales', 'Control concurrente de stock', 'Migraciones de base de datos', 'Pruebas y CI'],
+      demoNote: 'La API puede tardar en iniciar. El repositorio incluye instrucciones para ejecutarla localmente.'
     },
     {
       id: 2,
-      title: 'Lienzo Culinario - Fullstack',
-      description: 'Plataforma de delivery de comida con panel administrativo, gestión de pedidos, sistema de pagos y reseñas.',
-      longDescription: 'Aplicación fullstack colaborativa desarrollada durante el bootcamp de Henry. Incluye frontend en React, backend en NestJS, base de datos PostgreSQL, integración con Stripe para pagos, sistema de reseñas y gestión completa de órdenes.',
-      technologies: ['NestJS', 'TypeScript', 'React', 'PostgreSQL', 'JWT', 'Stripe', 'Cloudinary', 'Auth0'],
-      category: 'Fullstack',
+      title: 'Lienzo Culinario — Ecommerce colaborativo',
+      description: 'Ecommerce de comida desarrollado en equipo durante Henry, con pedidos, pagos con Stripe y gestión de recursos multimedia.',
+      longDescription: 'Proyecto colaborativo con frontend en Next.js y backend en NestJS. Mi participación se centró en el backend: pagos con Stripe, autenticación y recursos multimedia con Cloudinary.',
+      contribution: 'Colaboración en backend: pagos, autenticación y recursos multimedia. El frontend fue desarrollado por otros integrantes del equipo.',
+      technologies: ['NestJS', 'TypeScript', 'PostgreSQL', 'Stripe', 'Next.js', 'Cloudinary', 'Auth0'],
+      category: 'Backend',
       link: 'https://lienzofront.vercel.app',
       github: 'https://github.com/lienzoculinariog2/nuevolienzoback-',
       image: '/images/projects/lienzo-culinario.jpg',
-      status: 'Production',
+      status: 'Completed',
       metrics: '',
-      achievements: ['Proyecto colaborativo', 'Integración con Stripe', 'Sistema de reseñas', 'Gestión de ingredientes']
+      achievements: ['Trabajo colaborativo', 'Pagos con Stripe', 'Autenticación', 'Recursos multimedia'],
+      demoNote: 'Proyecto académico. La disponibilidad de los servicios de la demo puede variar.'
     },
     {
       id: 3,
-      title: 'Sushi POS - Daruma Ramen House',
-      description: 'Sistema completo de punto de venta para restaurante japonés con gestión de productos, órdenes, pagos, asistencia de empleados y control de inventario.',
-      longDescription: 'Aplicación fullstack desarrollada con NestJS para el restaurante Daruma Ramen House. Incluye módulos de productos con subcategorías y extras, sistema de órdenes y pagos con Stripe, gestión de asistencia de empleados con check-in/check-out automático, integración con Cloudinary para imágenes, documentación Swagger completa, containerización con Docker y despliegue en Render con base de datos Neon PostgreSQL.',
-      technologies: ['NestJS', 'TypeScript', 'React', 'PostgreSQL', 'JWT', 'Stripe', 'Cloudinary', 'Swagger', 'Docker', 'bcrypt'],
+      title: 'Sushi POS — Punto de venta',
+      description: 'Proyecto de punto de venta con productos, órdenes e inventario. Incluye una demo frontend con datos ficticios para explorar el flujo de atención.',
+      longDescription: 'Backend con NestJS, TypeORM y PostgreSQL, e interfaz con Next.js y React. La demo permite seleccionar productos, crear y cancelar órdenes y simular un cobro. No procesa pagos reales ni demuestra una operación comercial en producción.',
+      contribution: 'Desarrollo de servicios para usuarios, productos, categorías y órdenes; mejoras de integridad y demo frontend del flujo de venta.',
+      technologies: ['NestJS', 'TypeScript', 'Next.js', 'PostgreSQL', 'React', 'TypeORM', 'JWT', 'Swagger'],
       category: 'Fullstack',
-      link: 'https://sushi-pos-frontend.vercel.app',
+      link: 'https://sushi-pos-frontend.vercel.app/demo',
       github: 'https://github.com/FLAranoHerrera/sushi-pos-backend',
+      frontendGithub: 'https://github.com/FLAranoHerrera/sushi-pos-frontend',
       image: '/images/projects/sushi-pos.jpg',
-      status: 'Production',
+      status: 'Development',
       metrics: '',
-      achievements: ['Sistema de asistencia automático', 'Integración con Stripe', 'Arquitectura modular', 'Despliegue en producción', 'Docker containerizado']
+      achievements: ['Órdenes e inventario', 'Demo sin registro', 'Datos ficticios', 'Pruebas de comportamiento'],
+      demoNote: 'Simulación en el navegador: sin cuentas, datos de clientes ni cobros reales.'
     }
   ],
   other: [
@@ -101,16 +108,16 @@ export const PROJECTS_DATA: ProjectsData = {
     },
     {
       id: 8,
-      title: 'Portfolio Profesional Avanzado',
-      description: 'Portfolio personal con diseño gaming, optimizado para SEO, mejoras de accesibilidad, testing automatizado y CI/CD.',
-      longDescription: 'Portfolio profesional desarrollado con React 19, TypeScript y Vite. Incluye lazy loading de componentes, optimizaciones de rendimiento con React.memo, testing completo con Vitest y Testing Library, SEO avanzado con React Helmet, headers de seguridad, CI/CD con GitHub Actions, imágenes SVG personalizadas y diseño responsive con TailwindCSS.',
+      title: 'Portfolio Profesional',
+      description: 'Portfolio personal con React y TypeScript, presentación de experiencia, proyectos y acceso al CV.',
+      longDescription: 'Portfolio con React, TypeScript y Vite. Incluye navegación adaptable, imágenes de proyectos, pruebas de navegación y contenido con Vitest y Testing Library y despliegue mediante GitHub Actions.',
       technologies: ['React 19', 'TypeScript', 'Vite 7', 'TailwindCSS', 'Vitest', 'Testing Library', 'GitHub Actions', 'SEO', 'Accessibility'],
       category: 'Frontend',
       github: 'https://github.com/FLAranoHerrera/mi-portfolio',
       image: '/images/projects/portfolio.svg',
       status: 'Production',
       metrics: '',
-      achievements: ['Testing automatizado completo', 'CI/CD con GitHub Actions', 'SEO optimizado', 'Headers de seguridad', 'Lazy loading implementado']
+      achievements: ['Pruebas de navegación', 'GitHub Actions', 'Diseño adaptable', 'CV descargable']
     }
   ]
 };

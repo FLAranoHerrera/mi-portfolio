@@ -1,9 +1,4 @@
 import { PROJECTS_DATA } from "@/config/projects";
-const contributions = [
-  "Desarrollo del backend, autenticación y documentación de la API.",
-  "Colaboración en el backend: pagos, autenticación y recursos multimedia.",
-  "Desarrollo de servicios para usuarios, productos, categorías y órdenes.",
-];
 export default function Projects() {
   return (
     <section
@@ -19,7 +14,7 @@ export default function Projects() {
         </p>
       </div>
       <div className="project-grid">
-        {PROJECTS_DATA.featured.map((project, index) => (
+        {PROJECTS_DATA.featured.map((project) => (
           <article className="project-card" key={project.id}>
             <a
               className="project-image"
@@ -42,8 +37,9 @@ export default function Projects() {
               <p>{project.description}</p>
               <p className="contribution">
                 <strong>Mi aportación</strong>
-                {contributions[index]}
+                {project.contribution}
               </p>
+              {project.demoNote && <p className="muted small">{project.demoNote}</p>}
               <ul className="tags" aria-label="Tecnologías">
                 {project.technologies.slice(0, 4).map((tech) => (
                   <li key={tech}>{tech}</li>
@@ -59,8 +55,11 @@ export default function Projects() {
                   rel="noreferrer"
                   aria-label={`Ver código de ${project.title}`}
                 >
-                  Código ↗
+                  {project.frontendGithub ? "Backend ↗" : "Código ↗"}
                 </a>
+                {project.frontendGithub && (
+                  <a href={project.frontendGithub} target="_blank" rel="noreferrer">Frontend ↗</a>
+                )}
               </div>
             </div>
           </article>

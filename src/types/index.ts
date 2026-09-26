@@ -4,6 +4,9 @@ export interface Project {
   title: string;
   description: string;
   longDescription: string;
+  contribution?: string;
+  demoNote?: string;
+  frontendGithub?: string;
   technologies: string[];
   category: 'Backend' | 'Frontend' | 'Fullstack';
   link?: string;

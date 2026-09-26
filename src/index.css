@@ -493,3 +493,8 @@ a:hover {
     transition: none !important;
   }
 }
+
+.experience-outcomes { padding-left: 1.2rem; margin-top: 1.4rem; }
+.experience-outcomes li { margin-bottom: 1.4rem; }
+.experience-outcomes strong { color: var(--accent, #43ddeb); }
+.experience-outcomes p { margin-top: .35rem; }
